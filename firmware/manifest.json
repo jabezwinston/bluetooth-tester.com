@@ -1,0 +1,15 @@
+{
+  "zephyr": "v4.3",
+  "targets": {
+    "esp32":{"method":"esptool","board":"esp32_devkitc/esp32/procpu","images":[{"offset":4096,"file":"esp32/app.bin"}]},
+    "esp32s3":{"method":"esptool","board":"esp32s3_devkitc/esp32s3/procpu","images":[{"offset":0,"file":"esp32s3/app.bin"}]},
+    "esp32c3":{"method":"esptool","board":"esp32c3_devkitm/esp32c3","images":[{"offset":0,"file":"esp32c3/app.bin"}]},
+    "esp32c6":{"method":"esptool","board":"esp32c6_devkitc/esp32c6/hpcore","images":[{"offset":0,"file":"esp32c6/app.bin"}]},
+    "nrf52840dongle":{"method":"nrf-dfu","board":"nrf52840dongle/nrf52840","init":"nrf52840dongle/init.dat","image":"nrf52840dongle/app.bin","zip":"nrf52840dongle/hci_uart_dfu.zip"},
+    "nrf52832dk":{"method":"jlink","board":"nrf52dk/nrf52832","hex":"nrf52832dk/firmware.hex"},
+    "nrf52833dk":{"method":"jlink","board":"nrf52833dk/nrf52833","hex":"nrf52833dk/firmware.hex"},
+    "nrf52840dk":{"method":"jlink","board":"nrf52840dk/nrf52840","hex":"nrf52840dk/firmware.hex"},
+    "nrf5340":{"method":"jlink","board":"nrf5340dk/nrf5340/cpunet","hex":"nrf5340/firmware.hex"},
+    "nrf54l15":{"method":"jlink","board":"nrf54l15dk/nrf54l15/cpuapp","hex":"nrf54l15/firmware.hex"}
+  }
+}

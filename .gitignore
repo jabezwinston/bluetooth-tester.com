@@ -1,0 +1,12 @@
+# Dependencies (none today — vanilla JS, no build)
+node_modules/
+
+# Exported HCI captures
+*.pcapng
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log

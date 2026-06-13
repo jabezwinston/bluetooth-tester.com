@@ -1,0 +1,16 @@
+/*
+ * Bluetooth-Tester: carry HCI on uart0 (the onboard USB-UART bridge — CP2102/CH34x) so Web Serial
+ * talks H4 to it directly. The console is disabled via esp-hci.conf (not reassigned) so it doesn't
+ * share uart0 with the h4 driver and we don't need a spare pinned UART on every chip. The brief
+ * mask-ROM boot log on uart0 (only on a hard reset) is unavoidable; the host's H4 parser resyncs.
+ */
+/ {
+	chosen {
+		zephyr,bt-c2h-uart = &uart0;
+	};
+};
+
+&uart0 {
+	status = "okay";
+	current-speed = <115200>;
+};

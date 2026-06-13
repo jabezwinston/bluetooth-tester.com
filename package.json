@@ -1,0 +1,13 @@
+{
+  "name": "bluetooth-tester",
+  "version": "0.5.0",
+  "description": "Browser-based Bluetooth Host stack over raw HCI (Web Serial). Peripheral-focused test tool.",
+  "type": "module",
+  "private": true,
+  "license": "Apache-2.0",
+  "author": "Jabez Winston",
+  "scripts": {
+    "serve": "python3 -m http.server 8000",
+    "test": "node test/smoke.mjs && node test/smoke-m2.mjs && node test/smoke-crypto.mjs && node test/smoke-smp.mjs && node test/smoke-client.mjs && node test/smoke-profiles.mjs && node test/smoke-decode.mjs && node test/smoke-adv.mjs && node test/smoke-logdecode.mjs && node test/smoke-nrfdfu.mjs && node test/smoke-flash.mjs && node test/smoke-hci.mjs && node test/smoke-usb-drivers.mjs && node test/smoke-webusb-serial.mjs && node test/smoke-builder.mjs && node test/smoke-session-export.mjs && node test/smoke-dtm.mjs && node test/smoke-help.mjs"
+  }
+}
